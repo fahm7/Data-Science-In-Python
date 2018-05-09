@@ -19,7 +19,15 @@ r = requests.get(url, verify=False)
 #r= requests.get(url)
 
 # one line return html as string
-text= r.text
+html_doc = r.text
 print("\n\n______________DATA WITH RESUESTS___________\n")
-print(text)
+print(html_doc)
+
+#----------------- BEAUTIFUL SOUP -----------------------------
+
+from bs4 import BeautifulSoup
+
+soup= BeautifulSoup(html_doc)
+print(soup.text)
+
 
