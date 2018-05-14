@@ -1,3 +1,6 @@
 The webservices to get JSON data are in the below url:
 
 https://musicbrainz.org/doc/Development/JSON_Web_Service
+
+and try out examples in :
+https://www.w3schools.com/js/js_json_arrays.asp
