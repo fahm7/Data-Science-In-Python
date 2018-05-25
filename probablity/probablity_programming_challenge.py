@@ -33,8 +33,11 @@ def test(coins,flips):
     f=FlipPredictor(coins)
     gueses=[]
     for flip in flips:
+        #First we flip and ask for next
         f.update(flip)
+        # gues
         gueses.append(f.pheads())
     return gueses
-
+#passing the list of coin probablity in the bag
+#string for number of flips
 print (test([0.5,0.4,0.3],"HHTH"))
