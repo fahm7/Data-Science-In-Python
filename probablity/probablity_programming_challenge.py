@@ -14,13 +14,18 @@
 from __future__ import division
 class FlipPredictor(object):
     def __init__(self,coins):
+        #list of coins
         self.coins = coins
         n = len(coins)
+        # creating a list that gives probablity of each coin in time of a coin selected
+        #
         self.probs = [1 / n] * n
 
     def pheads(self):
+        #give the probablity of heads
         return sum(pcoin * p for pcoin, p in zip(self.coins, self.probs))
 
+#
     def update(self, result):
         pheads = self.pheads()
         if result == 'H':
